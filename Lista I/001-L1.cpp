@@ -6,6 +6,7 @@ Atenção considere a possibilidade dos números serem iguais. */
 
 
 #include <iostream>
+
 int main()
 {
     int num, num_2;
