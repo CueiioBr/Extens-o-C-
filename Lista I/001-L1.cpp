@@ -1,27 +1,27 @@
-// Make a program in C++ for read two whole numbers any and print what their is bigger.
-// Atention: consider the possibility of the numbers being equals.
+/* Make a program in C++ for read two whole numbers any and print what their is bigger.
+Atention: consider the possibility of the numbers being equals.
 
-// Faça um programa em C++ para ler dois números inteiros quaisquer e imprimir qual deles é o maior. 
-// Atenção considere a possibilidade dos números serem iguais.
+Faça um programa em C++ para ler dois números inteiros quaisquer e imprimir qual deles é o maior. 
+Atenção considere a possibilidade dos números serem iguais. */
 
 
 #include <iostream>
 int main()
 {
-    int num, num2;
+    int num, num_2;
 
-    std::cout << "Digite um numero: \n";
+    std::cout << "Digite Um Número: \n";
     std::cin >> num;
-    std::cout << "Digite um numero: \n";
-    std::cin >> num2;
+    std::cout << "Digite Outro Número: \n";
+    std::cin >> num_2;
 
-    if(num > num2)
+    if(num > num_2)
     {
-        std::cout << num << " é Maior Que " << num2 << std::endl;
+        std::cout << num << " É Maior Que " << num_2 << std::endl;
     }
-    else if(num < num2)
+    else if(num < num_2)
     {
-        std::cout << num2 << " é Maior Que " << num << std::endl;
+        std::cout << num_2 << " É Maior Que " << num << std::endl;
     }
     else
     {
