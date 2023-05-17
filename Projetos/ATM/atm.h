@@ -1,67 +1,44 @@
 #ifndef ATM_H
 #define ATM_H
+
 #include <iostream>
+using namespace std;
 
 class atm
 {
     public:
-    
-        void menu();
+        /*
+            Declaração de Funções
 
-        int verifier(int acc, int pss)
-        {
-            if(acc == account_number && pss == password)
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
+            dataChecker() -> Verifica se os dados da conta inseridos na tela de login estão corretos.
+            mainMenu() -> Imprime o menu de opções para o usuário após passar pelo menu de login.
+            
+            getBalance() -> Retorna o saldo atual do usuário.
+            setBalance() -> Adiciona ou retira dinheiro da conta do usuário.
 
-        float getBalance()
-        {
-            return balance;
-        }
+            setPhoneNumber() -> Modifica o número de telefone do usuário.
 
-        void setBalance(int amt, int opt)
-        {
-            if(amt > 0 && opt == 1)
-            {
-                if(balance > 0 && (balance - amt) >= 0)
-                {
-                    balance -= amt;
-                }
-            }
+            printDetails() -> Imprime todas as informações do usuário.
 
-            else if(amt > 0 && opt == 2)
-            {
-                balance += amt;
-            }
-        }
+        */
+        int dataChecker( int, int );
+        void mainMenu();
 
-        void setPhoneNumber(std::string nmbr)
-        {
-            phone_number = nmbr;
-            formated_phone_number = "(" + phone_number.substr(0,2) + ") " + phone_number.substr(2, 5) + "-" + phone_number.substr(7);
-        }
+        float getBalance();
+        void setBalance( int, int );
 
-        std::string getNumber()
-        {
-            return phone_number;
-        }
+        string setPhoneNumber( string );
 
-        void printDetails()
-        {
-            std::cout << "Name: " << name << "\nAccount Number: " << account_number <<"\nPhone Number: " << formated_phone_number;
-        }
+        void printDetails();
+
 
     private:
-        int account_number = 100, password = 2004;
+        int accountNumber = 100;
+        int password = 2004;
         float balance = 100;
-        std::string name = "Isaque Gabriel", phone_number = "81994929522";
-        std::string formated_phone_number = "(" + phone_number.substr(0,2) + ") " + phone_number.substr(2, 5) + "-" + phone_number.substr(7);
+        string name = "Isaque Gabriel";
+        string phoneNumber = "Not registered";
+        string formatedPhoneNumber = "Not registered";
 };
 
 #endif

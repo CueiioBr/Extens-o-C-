@@ -9,22 +9,23 @@ int main()
 {
     atm user; 
 
-    int account_number, password, main_option;
-    string phone_number;
+    int accountNumber, password, mainOption;
+    string phoneNumber;
     float amount = 0;
+
     while(true)
     {
         do
         {
             printf("iBank - Digital ATM\n");
             printf("Enter your account number:\n");
-            scanf("%d", &account_number);
+            scanf("%d", &accountNumber);
             printf("Enter your password:\n");
             scanf("%d", &password);
             system("cls");
-        } while (account_number < 0 && password < 0);
+        } while (accountNumber < 0 && password < 0);
 
-        if(user.verifier(account_number, password) == 1)
+        if(user.dataChecker(accountNumber, password) == 1)
         {
             printf("Authorized access\nWait...\n");
             Sleep(2000);
@@ -32,11 +33,11 @@ int main()
 
             while (true)
             {
-                user.menu();
-                scanf("%d", &main_option);
+                user.mainMenu();
+                scanf("%d", &mainOption);
                 system("cls");
 
-                switch (main_option)
+                switch (mainOption)
                 {
                     case 1:
                         printf("Balance: R$%.2f\n", user.getBalance());
@@ -68,12 +69,12 @@ int main()
                     
                     case 5:
                         cout << "Enter your new phone number: ";
-                        cin >> phone_number;
+                        cin >> phoneNumber;
 
-                        if(phone_number.length() == 11)
+                        if(phoneNumber.length() == 11)
                         {
-                            user.setPhoneNumber(phone_number);
-                            cout << user.getNumber();
+                            user.setPhoneNumber(phoneNumber);
+                            cout << "Phone number changed successfully." << endl;
                             Sleep(2000);
                             system("cls");
                         }
