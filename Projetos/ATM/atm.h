@@ -1,17 +1,12 @@
-#ifndef ATM.H
-#define ATM.H
-
+#ifndef ATM_H
+#define ATM_H
 #include <iostream>
 
-class Atm
+class atm
 {
     public:
-        void mainMenu()
-        {
-            printf("iBank - Digital ATM\n");
-            printf("[1] - Check Balance\n[2] - Withdraw\n[3] - Deposit\n[4] - User Details\n[5] - Change Phone Number\n[6] - Exit\n");
-            printf("Choice a option:\n");
-        }
+    
+        void menu();
 
         int verifier(int acc, int pss)
         {
@@ -68,4 +63,5 @@ class Atm
         std::string name = "Isaque Gabriel", phone_number = "81994929522";
         std::string formated_phone_number = "(" + phone_number.substr(0,2) + ") " + phone_number.substr(2, 5) + "-" + phone_number.substr(7);
 };
+
 #endif

@@ -7,7 +7,8 @@ using namespace std;
 
 int main()
 {
-    Atm user;
+    atm user; 
+
     int account_number, password, main_option;
     string phone_number;
     float amount = 0;
@@ -31,7 +32,7 @@ int main()
 
             while (true)
             {
-                user.mainMenu();
+                user.menu();
                 scanf("%d", &main_option);
                 system("cls");
 
